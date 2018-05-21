@@ -8,7 +8,7 @@
 
 	<context id="context1" targetRuntime="MyBatis3">
 
-		<plugin type="org.mybatis.generator.plugins.MySqlPaginationPlugin" />
+		<!--<plugin type="org.mybatis.org.mybatis.generator.plugins.MySqlPaginationPlugin"/>-->
 
 		<commentGenerator>
 			<property name="suppressAllComments" value="true" />
