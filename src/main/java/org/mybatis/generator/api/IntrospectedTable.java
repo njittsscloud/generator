@@ -881,7 +881,7 @@ public abstract class IntrospectedTable {
     protected String calculateMyBatis3XmlMapperFileName() {
         StringBuilder sb = new StringBuilder();
         sb.append(fullyQualifiedTable.getDomainObjectName());
-        sb.append("Mapper.xml"); //$NON-NLS-1$
+        sb.append("Dao.xml"); //$NON-NLS-1$
         return sb.toString();
     }
 
@@ -894,7 +894,7 @@ public abstract class IntrospectedTable {
         sb.append(calculateSqlMapPackage());
         sb.append('.');
         sb.append(fullyQualifiedTable.getDomainObjectName());
-        sb.append("Mapper"); //$NON-NLS-1$
+        sb.append("Dao"); //$NON-NLS-1$
         return sb.toString();
     }
 

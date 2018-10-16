@@ -3,8 +3,8 @@
 <generatorConfiguration>
 
 	<!-- 1.修改mysql jar目录 -->
-	<classPathEntry
-		location="E:\JavaEE\.m2\repository\mysql\mysql-connector-java\5.1.15\mysql-connector-java-5.1.15.jar" />
+	<!--<classPathEntry
+		location="E:\JavaEE\.m2\repository\mysql\mysql-connector-java\5.1.15\mysql-connector-java-5.1.15.jar" />-->
 
 	<context id="context1" targetRuntime="MyBatis3">
 
@@ -16,25 +16,31 @@
 
 		<!-- 2.修改mysql 数据源 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://192.168.1.230:3306/test" userId="mysql"
-			password="mysql" />
+			connectionURL="jdbc:mysql://127.0.0.1:3306/njit_account" 
+			userId="root" password="root" />
 
 		<!-- 3.修改model、Dao、Mapper存放目录 -->
-		<javaModelGenerator targetPackage="com.sks.basic.simple.service.model"
+		<!-- po类 -->
+		<javaModelGenerator targetPackage="com.tss.account.services.student.po"
 			targetProject="src/main/java" />
 
-		<sqlMapGenerator targetPackage="com.sks.basic.simple.service.dao.impl"
+		<!-- xml -->
+		<sqlMapGenerator targetPackage="com.tss.account"
 			targetProject="src/main/java" />
 
-		<javaClientGenerator targetPackage="com.sks.basic.simple.service.dao"
+		<!-- 接口 -->
+		<javaClientGenerator targetPackage="com.tss.account.services.student.dao"
 			targetProject="src/main/java" type="XMLMAPPER" />
 
 
 		<!-- 4.填写表名和实体类名 -->
 		<!--<table tableName="test" domainObjectName="Test" ></table>-->
-		<table tableName="test" domainObjectName="Test" enableCountByExample="false" enableDeleteByExample="false"
-			   enableSelectByExample="false" enableUpdateByExample="false"></table>
-
+		<!--<table tableName="sks_retail_settle_contract" domainObjectName="RetailSettleContract" 
+			   enableCountByExample="false" enableDeleteByExample="false"
+			   enableSelectByExample="false" enableUpdateByExample="false"/>-->
+		<table tableName="njit_student" domainObjectName="Student" 
+			   enableCountByExample="false" enableDeleteByExample="false"
+			   enableSelectByExample="false" enableUpdateByExample="false"/>
 
 	</context>
 </generatorConfiguration>
