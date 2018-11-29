@@ -22,4 +22,12 @@ public class MybatisGenerator {
         ShellRunner.main(arg);
     }
 
+    @Test
+    public void generateReport() {
+        String config = MySqlPaginationPlugin.class.getClassLoader()
+                .getResource("mybatis-generator-cfg-report-report.xml").getFile();
+        String[] arg = {"-configfile", config, "-overwrite"};
+        ShellRunner.main(arg);
+    }
+
 }
