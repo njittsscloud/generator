@@ -28,4 +28,12 @@ public class MybatisGenerator {
 		String[] arg = { "-configfile", config, "-overwrite" };
 		ShellRunner.main(arg);
 	}
+
+	@Test
+	public void generateAccountStudent() {
+		String config = MySqlPaginationPlugin.class.getClassLoader()
+				.getResource("mybatis-generator-cfg-account-student.xml").getFile();
+		String[] arg = { "-configfile", config, "-overwrite" };
+		ShellRunner.main(arg);
+	}
 }
