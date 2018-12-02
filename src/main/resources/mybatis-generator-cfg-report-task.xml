@@ -35,9 +35,6 @@
 
 		<!-- 4.填写表名和实体类名 -->
 		<!--<table tableName="test" domainObjectName="Test" ></table>-->
-		<!--<table tableName="sks_retail_settle_contract" domainObjectName="RetailSettleContract" 
-			   enableCountByExample="false" enableDeleteByExample="false"
-			   enableSelectByExample="false" enableUpdateByExample="false"/>-->
 		<table tableName="njit_task" domainObjectName="Task"
 			   enableCountByExample="false" enableDeleteByExample="false"
 			   enableSelectByExample="false" enableUpdateByExample="false"/>

@@ -16,26 +16,30 @@
 
 		<!-- 2.修改mysql 数据源 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://127.0.0.1:3306/njit_report"
+			connectionURL="jdbc:mysql://127.0.0.1:3306/njit_account" 
 			userId="root" password="root" />
 
 		<!-- 3.修改model、Dao、Mapper存放目录 -->
 		<!-- po类 -->
-		<javaModelGenerator targetPackage="com.tss.report.services.report.po"
+		<javaModelGenerator targetPackage="com.tss.account.services.admin.po"
 			targetProject="src/main/java" />
 
 		<!-- xml -->
-		<sqlMapGenerator targetPackage="com.tss.report"
+		<sqlMapGenerator targetPackage="com.tss.account"
 			targetProject="src/main/java" />
 
 		<!-- 接口 -->
-		<javaClientGenerator targetPackage="com.tss.report.services.report.dao"
+		<javaClientGenerator targetPackage="com.tss.account.services.admin.dao"
 			targetProject="src/main/java" type="XMLMAPPER" />
 
 
 		<!-- 4.填写表名和实体类名 -->
 		<!--<table tableName="test" domainObjectName="Test" ></table>-->
-		<table tableName="njit_report" domainObjectName="Report"
+		<table tableName="njit_admin" domainObjectName="Admin"
+			   enableCountByExample="false" enableDeleteByExample="false"
+			   enableSelectByExample="false" enableUpdateByExample="false"/>
+		
+		<table tableName="njit_admin_session" domainObjectName="AdminSession"
 			   enableCountByExample="false" enableDeleteByExample="false"
 			   enableSelectByExample="false" enableUpdateByExample="false"/>
 

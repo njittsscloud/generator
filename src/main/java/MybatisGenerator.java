@@ -46,13 +46,6 @@ public class MybatisGenerator {
 		ShellRunner.main(arg);
 	}
 
-	@Test
-	public void generateAccountStudent() {
-		String config = MySqlPaginationPlugin.class.getClassLoader()
-				.getResource("mybatis-generator-cfg-account-student.xml").getFile();
-		String[] arg = { "-configfile", config, "-overwrite" };
-		ShellRunner.main(arg);
-	}
     @Test
     public void generateReport() {
         String config = MySqlPaginationPlugin.class.getClassLoader()
@@ -60,5 +53,37 @@ public class MybatisGenerator {
         String[] arg = {"-configfile", config, "-overwrite"};
         ShellRunner.main(arg);
     }
+
+	@Test
+	public void generateAccountStudent() {
+		String config = MySqlPaginationPlugin.class.getClassLoader()
+				.getResource("mybatis-generator-cfg-account-student.xml").getFile();
+		String[] arg = { "-configfile", config, "-overwrite" };
+		ShellRunner.main(arg);
+	}
+
+	@Test
+	public void generateAccountTeacher() {
+		String config = MySqlPaginationPlugin.class.getClassLoader()
+				.getResource("mybatis-generator-cfg-account-teacher.xml").getFile();
+		String[] arg = { "-configfile", config, "-overwrite" };
+		ShellRunner.main(arg);
+	}
+
+	@Test
+	public void generateAccountSyy() {
+		String config = MySqlPaginationPlugin.class.getClassLoader()
+				.getResource("mybatis-generator-cfg-account-syy.xml").getFile();
+		String[] arg = { "-configfile", config, "-overwrite" };
+		ShellRunner.main(arg);
+	}
+
+	@Test
+	public void generateAccountAdmin() {
+		String config = MySqlPaginationPlugin.class.getClassLoader()
+				.getResource("mybatis-generator-cfg-account-admin.xml").getFile();
+		String[] arg = { "-configfile", config, "-overwrite" };
+		ShellRunner.main(arg);
+	}
 
 }
