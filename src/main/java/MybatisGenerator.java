@@ -29,7 +29,8 @@ public class MybatisGenerator {
         String[] arg = {"-configfile", config, "-overwrite"};
         ShellRunner.main(arg);
     }
-
+    
+	/*data  start*/
 	@Test
 	public void generateDataCourse() {
 		String config = MySqlPaginationPlugin.class.getClassLoader()
@@ -46,6 +47,17 @@ public class MybatisGenerator {
 		ShellRunner.main(arg);
 	}
 
+	@Test
+	public void generateDataClass() {
+		String config = MySqlPaginationPlugin.class.getClassLoader()
+				.getResource("mybatis-generator-cfg-data-class.xml").getFile();
+		String[] arg = { "-configfile", config, "-overwrite" };
+		ShellRunner.main(arg);
+	}
+	
+	/*data  end*/
+	
+	
     @Test
     public void generateReport() {
         String config = MySqlPaginationPlugin.class.getClassLoader()
